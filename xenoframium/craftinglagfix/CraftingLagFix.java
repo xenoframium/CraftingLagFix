@@ -35,10 +35,8 @@ public class CraftingLagFix extends DummyModContainer {
 	
 	@Subscribe
 	public void serverStarting(FMLServerStartingEvent event) {
-		try {
 		System.out.println("Starting crafting recipe initialisation...");
 		CraftingRegistry.processRecipes();
-		}catch(Throwable t){t.printStackTrace();};
 	}
 	
 	@Subscribe
